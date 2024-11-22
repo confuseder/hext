@@ -1,3 +1,9 @@
 export default function Home() {
-  return <div className="w-10 h-10 bg-main shadow"></div>;
+  return (
+    <div className="bg-main shadow">
+      {Array.from({ length: 50 }, (_, i) => (
+        <div key={i}>test</div>
+      ))}
+    </div>
+  );
 }

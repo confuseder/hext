@@ -1,28 +1,30 @@
 import "./globals.css";
-import localFont from "next/font/local";
-import { ThemeProvider } from "./ui/themeProvider";
-import ThemeSwitch from "./ui/themeSwith";
+import {ThemeProvider} from "./ui/themeProvider";
+import NavBar from "./ui/navBar";
+import {Noto_Sans_SC} from "next/font/google";
 
-const firaCode = localFont({
-  src: "./fonts/FiraCode-VF.woff",
-  variable: "--fira-vf",
+const notoSansSC = Noto_Sans_SC({
+    variable: "--noto-sans-sc",
+    subsets: ["latin"],
 });
 
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
+                                       children,
+                                   }: Readonly<{
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${firaCode.className} ${firaCode.variable} bg-background`}
-      >
+    return (
+        <html lang="en" suppressHydrationWarning>
+        <body
+            className={`${notoSansSC.className} ${notoSansSC.variable} bg-background`}
+        >
         <ThemeProvider defaultTheme="system" enableSystem>
-          <ThemeSwitch />
-          {children}
+            <NavBar/>
+            <main className="max-w-6xl mx-auto p-6">
+                {children}
+            </main>
         </ThemeProvider>
-      </body>
-    </html>
-  );
+        </body>
+        </html>
+    );
 }
