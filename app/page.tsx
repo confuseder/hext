@@ -1,9 +1,13 @@
+import ArticleCard from "@/app/ui/articleCard";
+
 export default function Home() {
-  return (
-    <div className="bg-main shadow">
-      {Array.from({ length: 50 }, (_, i) => (
-        <div key={i}>test</div>
-      ))}
-    </div>
-  );
+    return (
+        <div>
+            <ArticleCard/>
+            <ArticleCard/>
+            <ArticleCard/>
+            <ArticleCard/>
+            <ArticleCard/>
+        </div>
+    );
 }

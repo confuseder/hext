@@ -15,7 +15,7 @@
     --tag: #ececf2;
     --hover: #ececf2;
     --border: #e3e6eb;
-    --shadow: 0 4px 10px rgba(0, 2, 4, 0.06), 0 0 1px rgba(0, 2, 4, 0.11);
+    --shadow: 0 6px 12px rgba(0, 2, 4, 0.06), 0 0 2px rgba(0, 2, 4, 0.11);
   }
 
   [data-theme="dark"] {
@@ -30,6 +30,6 @@
     --tag: #3e4b5e;
     --hover: #3e4b5e;
     --border: #435266;
-    --shadow: 0 4px 10px rgba(0, 2, 4, 0.06), 0 0 1px rgba(0, 2, 4, 0.11);
+    --shadow: 0 6px 12px rgba(0, 2, 4, 0.5), 0 2px 4px rgba(0, 2, 4, 0.7);
   }
 }

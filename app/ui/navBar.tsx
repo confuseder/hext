@@ -5,10 +5,10 @@ import Image from "next/image";
 export default function NavBar() {
   return (
     <nav
-      className="sticky top-0 left-0 w-full min-h-20 shadow bg-main select-none
+      className="sticky top-0 left-0 w-full min-h-24 shadow bg-main select-none
                   px-5 flex flex-col sm:min-h-14 sm:flex-row sm:justify-between sm:items-stretch"
     >
-      <div className="flex justify-center items-stretch flex-grow sm:flex-grow-0 hover:bg-hover hover:text-link-hover">
+      <div className="flex justify-center items-stretch flex-grow sm:flex-grow-0">
         <span className="px-2 flex items-center">
           <Image
             src={"/icon.jpg"}
