@@ -3,11 +3,12 @@
 import { useTheme } from "next-themes";
 import { Eclipse, Sun } from "lucide-react";
 
-export default function ThemeSwitch() {
+export default function ThemeSwitch({ className }: { className: string }) {
   const { theme, setTheme } = useTheme();
 
   return (
     <span
+      className={`${className}`}
       onClick={() => {
         setTheme(theme == "light" ? "dark" : "light");
       }}
