@@ -5,7 +5,7 @@ import rehypeKatex from "rehype-katex";
 import rehypeHighlight from "rehype-highlight";
 
 import 'katex/dist/katex.css';
-import 'highlight/lib/vendor/highlight.js/styles/github.css'
+// import 'highlight.js/styles/.min.css';
 
 export default function CustomMDX(
     {source}: { source: string }

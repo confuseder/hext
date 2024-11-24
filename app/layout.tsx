@@ -16,11 +16,11 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
         <body
-            className={`${notoSansSC.className} ${notoSansSC.variable} bg-background`}
+            className={`${notoSansSC.className} ${notoSansSC.variable} bg-g`}
         >
         <ThemeProvider defaultTheme="system" enableSystem>
             <NavBar/>
-            <main className="max-w-6xl mx-auto p-6">
+            <main className="max-w-mx mx-auto p-6">
                 {children}
             </main>
         </ThemeProvider>
