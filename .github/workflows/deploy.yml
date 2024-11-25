@@ -16,7 +16,10 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
+          pnpm i 
+          cd Hexo
           pnpm i
+          cd ../
           pnpm run build
 
       - name: Deploy 🚀
