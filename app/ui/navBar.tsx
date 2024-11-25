@@ -1,11 +1,17 @@
 import Link from "next/link";
 import ThemeSwitch from "./themeSwith";
 import Image from "next/image";
+import { initHexo } from "../hexo";
 
-export default function NavBar() {
+export default async function NavBar() {
+  const hexo = await initHexo();
+
+  const pages = hexo.database.model("Page").toArray();
+  pages.unshift({ title: "首页", url: "/", source: "", path: "" });
+
   return (
     <nav
-      className="sticky top-0 left-0 w-full min-h-24 shadow bg-g-m text-c select-none z-auto
+      className="sticky top-0 left-0 w-full min-h-24 shadow bg-g-m text-c select-none z-50
                   px-5 flex flex-col sm:min-h-14 sm:flex-row sm:justify-between sm:items-stretch"
     >
       <div className="flex justify-center items-stretch flex-grow sm:flex-grow-0">
@@ -19,25 +25,24 @@ export default function NavBar() {
           />
         </span>
         <h1 className="px-2 flex items-center shrink-0 text-2xl font-bold">
-          盼兮的博客
+          {hexo.config.title}
         </h1>
       </div>
       <div className="flex justify-center items-stretch flex-grow sm:flex-grow-0">
-        {[
-          { text: "文章", link: "/" },
-          { text: "标签", link: "/" },
-          { text: "关于", link: "/" },
-          { text: "归档", link: "/" },
-        ].map((l) => {
+        {pages.map((l, index) => {
           return (
-            <Link
-              href={l.link}
-              key={1}
-              className="px-2 flex items-center leading-none shrink-0
+            <>
+              {l.url != undefined ? (
+                <Link
+                  href={`/${l.url}`}
+                  key={index}
+                  className="px-2 flex items-center leading-none shrink-0
                     hover:bg-g-n hover:text-c-a"
-            >
-              {l.text}
-            </Link>
+                >
+                  {l.title}
+                </Link>
+              ) : null}
+            </>
           );
         })}
         <ThemeSwitch className="px-2 flex items-center shrink-0 hover:bg-g-n hover:text-c-a" />
