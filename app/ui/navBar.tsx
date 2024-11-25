@@ -1,6 +1,5 @@
 import Link from "next/link";
 import ThemeSwitch from "./themeSwith";
-import Image from "next/image";
 import { initHexo } from "../hexo";
 
 export default async function NavBar() {
@@ -16,8 +15,8 @@ export default async function NavBar() {
     >
       <div className="flex justify-center items-stretch flex-grow sm:flex-grow-0">
         <span className="px-2 flex items-center">
-          <Image
-            src={"/icon.jpg"}
+          <img
+            src="/icon.jpg"
             alt={"icon"}
             width={750}
             height={750}
