@@ -14,7 +14,7 @@ export default async function ArticleCard({
       <div className="flex flex-col gap-3 justify-between p-6">
         <Link
           className="text-c font-bold text-2xl"
-          href={`/posts/${postData._id}`}
+          href={`/posts/${postData.slug}`}
         >
           {postData.title}
         </Link>

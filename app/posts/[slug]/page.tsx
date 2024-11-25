@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
   return pages.map((page) => {
     return {
-      id: page._id,
+      slug: page.slug,
     };
   });
 }
@@ -21,12 +21,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const hexo = await initHexo();
 
   const data: PostSchema = hexo.database.model("Post").findOne({
-    _id: (await params).id,
+    slug: (await params).slug,
   });
 
   return {
@@ -40,12 +40,12 @@ export async function generateMetadata({
 export default async function ArticlePage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
   const hexo = await initHexo();
 
   const data: PostSchema = hexo.database.model("Post").findOne({
-    _id: (await params).id,
+    slug: (await params).slug,
   });
 
   if (!data) {
