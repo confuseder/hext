@@ -233,6 +233,7 @@
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 2em;
+  list-style-type: revert;
 }
 #blog_article_section ol ol,
 #blog_article_section ol ul,
@@ -243,13 +244,13 @@
 }
 #blog_article_section ol ol,
 #blog_article_section ul ol {
-  list-style-type: lower-roman;
+  list-style-type: upper-roman;
 }
 #blog_article_section ol ol ol,
 #blog_article_section ol ul ol,
 #blog_article_section ul ol ol,
 #blog_article_section ul ul ol {
-  list-style-type: lower-alpha;
+  list-style-type: upper-alpha;
 }
 #blog_article_section li > p {
   margin-top: 16px;
@@ -260,7 +261,7 @@
 #blog_article_section code {
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
     Liberation Mono, monospace;
-  font-size: 0.90em;
+  font-size: 0.9em;
   margin: 0;
   padding: 0.2em 0.4em;
   background-color: var(--g-c);
