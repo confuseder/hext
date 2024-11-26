@@ -1,10 +1,15 @@
 import "./globals.css";
 import { ThemeProvider } from "./ui/themeProvider";
 import NavBar from "./ui/navBar";
-import { Noto_Sans_SC } from "next/font/google";
+import { Fira_Code, Noto_Sans_SC } from "next/font/google";
 
 const notoSansSC = Noto_Sans_SC({
   variable: "--noto-sans-sc",
+  subsets: ["latin"],
+});
+
+const firaCode = Fira_Code({
+  variable: "--fira-code",
   subsets: ["latin"],
 });
 
@@ -15,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${notoSansSC.className} ${notoSansSC.variable} bg-g`}>
+      <body className={`${notoSansSC.className} ${notoSansSC.variable} ${firaCode.variable} bg-g`}>
         <ThemeProvider defaultTheme="system" enableSystem>
           <NavBar />
           <main className="max-w-mx mx-auto p-6">{children}</main>

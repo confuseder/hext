@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   :root {
     --g: #f2f5f8; /* 背景色 */
     --g-m: #fff; /* 主窗口背景 */
@@ -57,7 +58,9 @@
 #blog_article_section {
   line-height: 1.5;
   word-wrap: break-word;
+  font-family: 'Fira Code', 'Noto Sans SC';
 }
+
 #blog_article_section > :first-child {
   margin-top: 0 !important;
 }
@@ -259,8 +262,7 @@
   margin-top: 0.25em;
 }
 #blog_article_section code {
-  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
-    Liberation Mono, monospace;
+  font-family: var(--fira-code);
   font-size: 0.9em;
   margin: 0;
   padding: 0.2em 0.4em;
@@ -271,6 +273,7 @@
   display: none;
 }
 #blog_article_section pre {
+  font-family: var(--fira-code);
   padding: 1rem;
   overflow: auto;
   font-size: 0.85em;
