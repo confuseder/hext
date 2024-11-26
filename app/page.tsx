@@ -23,7 +23,8 @@ export default async function Home() {
     <div>
       {posts.map((post: PostSchema, index) => {
         const category = hexo.database.model("Category").findOne({
-          id: hexo.database.model("PostCategory").findOne({ post_id: post.id }),
+          _id: hexo.database.model("PostCategory").findOne({ post_id: post._id })
+            ?.category_id,
         });
 
         return (

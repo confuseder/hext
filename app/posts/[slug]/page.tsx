@@ -53,7 +53,7 @@ export default async function ArticlePage({
   }
 
   const category = hexo.database.model("Category").findOne({
-    id: hexo.database.model("PostCategory").findOne({ post_id: data.id }),
+    _id: hexo.database.model("PostCategory").findOne({ post_id: data._id })?.category_id,
   });
 
   return (
