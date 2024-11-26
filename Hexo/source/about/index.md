@@ -5,6 +5,25 @@ date: 2024-11-24 09:05:57
 disableNunjucks: true
 ---
 
+16 岁， 高中生，退役 OIer，重度拖延症，很无聊的人。
+
+会什么：
+
+- React | Next.js | TailwindCSS
+- C++ | Rust | Typescript
+- Network | BGP [RouterOS | Bird2]
+
+各种账号（欢迎骚扰）：
+- [Github](https://github.com/confuseder)
+- [Telegram](https://t.me/Panxi_39)
+
+### 关于这个博客：
+博客用 Next.js + TailwindCSS 编写，使用 Hexo 作为 CMS，静态渲染并部署在 Github Pages 上，[博客开源](https://github.com/confuseder/hext)
+
+#### 编写时参考了：
+- [Sukka's Blog](https://blog.skk.moe/)
+- [宝硕博客](https://blog.baoshuo.ren/)
+
 $$
 
 \def\showText#1#2#3{\normalsize\color{#1}\mathsf{#2}\\\scriptsize\mathsf{#3}\\\ \\}
