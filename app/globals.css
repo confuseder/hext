@@ -55,6 +55,10 @@
   }
 }
 
+main {
+  font-family: 'Fira Code', 'Noto Sans SC';
+}
+
 #blog_article_section {
   line-height: 1.5;
   word-wrap: break-word;
