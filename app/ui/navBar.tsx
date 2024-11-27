@@ -6,7 +6,8 @@ export default async function NavBar() {
   const hexo = await initHexo();
 
   const pages = hexo.database.model("Page").toArray();
-  pages.unshift({ title: "首页", url: "/", source: "", path: "" });
+  pages.unshift({ title: "分类", url: "category", source: "", path: "" });
+  pages.unshift({ title: "首页", url: "", source: "", path: "" });
 
   return (
     <nav

@@ -7,7 +7,7 @@ export default async function ArticleCard({
   category,
 }: {
   postData: PostSchema;
-  category: string;
+  category: string | undefined;
 }) {
   return (
     <article className="flex w-full bg-g-m my-4 text-c rounded overflow-auto hover:shadow">
@@ -30,7 +30,7 @@ export default async function ArticleCard({
           {category ? (
             <Link
               className="border text-c-s rounded-full px-3 py-1 mr-3 inline-flex gap-2"
-              href="/"
+              href={`/category/${category}`}
             >
               <Archive />
               <span>{category}</span>
