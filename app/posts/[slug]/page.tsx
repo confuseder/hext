@@ -61,7 +61,7 @@ export default async function ArticlePage({
       <header className="flex flex-col justify-between px-8 my-6">
         <Link
           className="mb-3 text-c font-bold text-2xl"
-          href={`/posts/${data._id}`}
+          href={`/posts/${data.slug}`}
         >
           {data.title}
         </Link>
