@@ -10,7 +10,7 @@ export default async function ArticleCard({
   category: string | undefined;
 }) {
   return (
-    <article className="flex w-full bg-g-m my-4 text-c rounded overflow-auto hover:shadow">
+    <article className="flex w-full bg-g-m mb-4 text-c rounded overflow-auto hover:shadow">
       <div className="flex flex-col gap-3 justify-between p-6">
         <Link
           className="text-c font-bold text-2xl"

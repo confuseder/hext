@@ -23,8 +23,8 @@ export default async function CategoryList() {
     .toArray();
 
   return (
-    <div className="bg-g-m rounded px-8 py-6">
-      <header className="flex justify-between items-center my-4">
+    <div className="bg-g-m rounded px-6 py-6">
+      <header className="flex justify-between items-center mb-4">
         <h1 className="text-c font-bold text-2xl">分类</h1>
         <span className="text-c-s">{`共 ${categoryList.length} 个`}</span>
       </header>
