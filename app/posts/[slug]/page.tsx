@@ -75,7 +75,7 @@ export default async function ArticlePage({
 
           {category?.name ? (
             <Link
-              className="border text-text rounded-full px-3 py-1 mr-3 inline-flex gap-2"
+              className="border text-c-s rounded-full px-3 py-1 mr-3 inline-flex gap-2"
               href="/"
             >
               <Archive />
