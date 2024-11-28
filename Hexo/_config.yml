@@ -9,7 +9,7 @@ description: '无聊的碎碎念'
 keywords:
 author: 盼兮
 language: zh  
-timezone: 'Asia/Shanghai'
+timezone: 'UTC'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
