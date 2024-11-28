@@ -30,20 +30,20 @@ export default async function NavBar() {
       </div>
       <div className="flex justify-center items-stretch flex-grow sm:flex-grow-0">
         {pages.map((l, index) => {
-          return (
-            <>
-              {l.url != undefined ? (
-                <Link
-                  href={`/${l.url}`}
-                  key={index}
-                  className="px-2 flex items-center leading-none shrink-0
+          if (l.url != undefined) {
+            return (
+              <Link
+                href={`/${l.url}`}
+                key={index}
+                className="px-2 flex items-center leading-none shrink-0
                     hover:bg-g-n hover:text-c-a"
-                >
-                  {l.title}
-                </Link>
-              ) : null}
-            </>
-          );
+              >
+                {l.title}
+              </Link>
+            );
+          } else {
+            return null;
+          }
         })}
         <ThemeSwitch className="px-2 flex items-center shrink-0 hover:bg-g-n hover:text-c-a" />
       </div>
