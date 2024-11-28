@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@giscus/react": "^3.0.0",
     "highlight.js": "^11.10.0",
     "katex": "^0.16.11",
     "lucide-react": "^0.460.0",
