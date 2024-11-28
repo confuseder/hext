@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: end-of-oi-career
-title: '揪心玩笑与漫长白日梦'
+title: '揪心玩笑与漫长的白日梦'
 excerpt: '关于废物竞赛生的废物人生和他不愿面对的未知'
 date: 2024-11-26 12:44:55
 categories: '碎碎念'
