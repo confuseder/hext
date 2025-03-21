@@ -20,10 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${notoSansSC.className} ${notoSansSC.variable} ${firaCode.variable} bg-g`}>
+      <body
+        className={`${notoSansSC.className} ${notoSansSC.variable} ${firaCode.variable} bg-g`}
+      >
         <ThemeProvider defaultTheme="system" enableSystem>
           <NavBar />
-          <main className="max-w-mx mx-auto p-6">{children}</main>
+          <main className="w-full h-[calc(100vh-3.5rem)] overflow-y-auto overflow-x-hidden pt-6 px-6 pb-6 scroll-container">
+            <div className="max-w-mx mx-auto">{children}</div>
+          </main>
         </ThemeProvider>
       </body>
     </html>

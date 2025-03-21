@@ -11,7 +11,7 @@ export default async function ArticleCard({
 }) {
   return (
     <article className="flex w-full bg-g-m mb-4 text-c rounded overflow-auto hover:shadow">
-      <div className="flex flex-col gap-3 justify-between p-6">
+      <div className="flex flex-col gap-3 justify-between px-8 py-6">
         <Link
           className="text-c font-bold text-2xl"
           href={`/posts/${postData.slug}`}

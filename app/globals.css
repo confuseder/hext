@@ -2,8 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+html {
+  overflow-y: hidden;
+}
 
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+main::-webkit-scrollbar {
+  width: var(--s-y);
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: var(--r);
+}
+
+main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+@layer base {
   :root {
     --g: #f2f5f8; /* 背景色 */
     --g-m: #fff; /* 主窗口背景 */
@@ -56,13 +82,13 @@
 }
 
 main {
-  font-family: 'Fira Code', 'Noto Sans SC';
+  font-family: "Fira Code", "Noto Sans SC";
 }
 
 #blog_article_section {
   line-height: 1.5;
   word-wrap: break-word;
-  font-family: 'Fira Code', 'Noto Sans SC';
+  font-family: "Fira Code", "Noto Sans SC";
 }
 
 #blog_article_section > :first-child {
