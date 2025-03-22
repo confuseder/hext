@@ -25,7 +25,7 @@ export default function RootLayout({
       >
         <ThemeProvider defaultTheme="system" enableSystem>
           <NavBar />
-          <main className="w-full h-[calc(100vh-3.5rem)] overflow-y-auto overflow-x-hidden pt-6 px-6 pb-6 scroll-container">
+          <main className="w-full h-[calc(100vh-6rem)] sm:h-[calc(100vh-3.5rem)] overflow-y-scroll overflow-x-hidden pt-6 px-6 pb-6 scroll-container">
             <div className="max-w-mx mx-auto">{children}</div>
           </main>
         </ThemeProvider>
