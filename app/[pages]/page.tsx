@@ -9,13 +9,16 @@ export async function generateStaticParams() {
 
   const pages = hexo.database.model("Page").toArray();
 
-  return pages
-    .filter((page) => page.url != undefined)
-    .map((page) => {
-      return {
-        pages: page.url,
-      };
-    });
+  return [
+    { pages: 'favicon.ico' },
+    ...pages
+      .filter((page) => page.url != undefined)
+      .map((page) => {
+        return {
+          pages: page.url,
+        };
+      })
+  ];
 }
 
 export async function generateMetadata({
