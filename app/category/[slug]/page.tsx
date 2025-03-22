@@ -50,7 +50,7 @@ export default async function ArticlePage({
 
   return (
     <>
-      <div className="bg-g-m rounded px-6 py-6 mb-6 flex justify-between items-center">
+      <div className="bg-g-m rounded px-8 py-6 mb-6 flex justify-between items-center">
         <h1 className="text-c font-bold text-2xl">
           {`分类：${category.name}`}
         </h1>
