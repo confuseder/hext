@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
   return categoryList.map((category) => {
     return {
-      slug: encodeURIComponent(category.name ?? ''),
+      slug: category.name,
     };
   });
 }
