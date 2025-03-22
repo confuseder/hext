@@ -6,8 +6,6 @@ import ArticleCard from "@/app/ui/articleCard";
 export async function generateStaticParams() {
   const hexo = await initHexo();
 
-  console.log(hexo.database.model("Category").find({}).toArray());
-
   const categoryList: CategorySchema[] = hexo.database
     .model("Category")
     .find({})
@@ -45,12 +43,6 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const hexo = await initHexo();
-
-  console.log(hexo.database
-    .model("Category")
-    .find({})
-    .toArray());
-  console.log((await params).slug);
 
   const category: CategorySchema = hexo.database.model("Category").findOne({
     _id: (await params).slug
