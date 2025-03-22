@@ -34,7 +34,7 @@ export default async function CategoryList() {
             <div key={index} className="flex justify-between items-center">
               <Link
                 className="text-c hover:text-c-a"
-                href={`/category/${category.name}`}
+                href={`/category/${category._id}`}
               >
                 {category.name}
               </Link>

@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
   return categoryList.map((category) => {
     return {
-      slug: category.name,
+      slug: category._id,
     };
   });
 }
@@ -26,7 +26,7 @@ export async function generateMetadata({
   const hexo = await initHexo();
 
   const category: CategorySchema = hexo.database.model("Category").findOne({
-    name: decodeURIComponent((await params).slug),
+    _id: (await params).slug,
   });
 
   return {
@@ -44,8 +44,11 @@ export default async function ArticlePage({
 }) {
   const hexo = await initHexo();
 
+  console.log((await params).slug);
+  console.log(decodeURIComponent((await params).slug));
+
   const category: CategorySchema = hexo.database.model("Category").findOne({
-    name: decodeURIComponent((await params).slug),
+    _id: (await params).slug
   });
 
   return (
