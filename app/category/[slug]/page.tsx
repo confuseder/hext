@@ -44,8 +44,11 @@ export default async function ArticlePage({
 }) {
   const hexo = await initHexo();
 
+  console.log(hexo.database
+    .model("Category")
+    .find({})
+    .toArray());
   console.log((await params).slug);
-  console.log(decodeURIComponent((await params).slug));
 
   const category: CategorySchema = hexo.database.model("Category").findOne({
     _id: (await params).slug
