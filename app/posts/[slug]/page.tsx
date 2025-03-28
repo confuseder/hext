@@ -79,7 +79,7 @@ export default async function ArticlePage({
             {category?.name ? (
               <Link
                 className="border text-c-s rounded-full px-3 py-1 mr-3 inline-flex gap-2"
-                href={`/category/${category?.name}`}
+                href={`/category/${category?._id}`}
               >
                 <Archive />
                 <span>{category?.name}</span>

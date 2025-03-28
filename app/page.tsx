@@ -28,7 +28,7 @@ export default async function Home() {
         });
 
         return (
-          <ArticleCard key={index} postData={post} category={category?.name} />
+          <ArticleCard key={index} postData={post} category={category} />
         );
       })}
     </div>

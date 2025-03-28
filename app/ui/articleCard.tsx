@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Archive, CalendarFold } from "lucide-react";
-import { PostSchema } from "hexo/dist/types";
+import { CategorySchema, PostSchema } from "hexo/dist/types";
 
 export default async function ArticleCard({
   postData,
   category,
 }: {
   postData: PostSchema;
-  category: string | undefined;
+  category: CategorySchema | undefined;
 }) {
   return (
     <article className="flex w-full bg-g-m mb-4 text-c rounded overflow-auto hover:shadow">
@@ -30,10 +30,10 @@ export default async function ArticleCard({
           {category ? (
             <Link
               className="border text-c-s rounded-full px-3 py-1 mr-3 inline-flex gap-2"
-              href={`/category/${category}`}
+              href={`/category/${category._id}`}
             >
               <Archive />
-              <span>{category}</span>
+              <span>{category.name}</span>
             </Link>
           ) : null}
         </div>
