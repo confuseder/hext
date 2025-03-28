@@ -5,7 +5,7 @@ date: 2024-11-24 09:05:57
 disableNunjucks: true
 ---
 
-16 岁，高中生，退役 OIer，重度拖延症，很无聊的人。
+17 岁，高中生，退役 OIer，重度拖延症，精神病 [抑郁，焦虑]，很无聊的人。
 
 > 阳光是给沉睡者准备的，彻夜未眠的人只觉得刺眼。
 
@@ -21,6 +21,8 @@ disableNunjucks: true
 - [Telegram](https://t.me/Panxi_39)
 
 ### 关于这个博客：
+很菜，写不出什么技术内容，也没人看，主要是碎碎念。
+
 博客用 Next.js + TailwindCSS 编写，使用 Hexo 作为 CMS，静态渲染并部署在 Github Pages 上，[博客开源](https://github.com/confuseder/hext)。
 
 #### 编写时参考了：
