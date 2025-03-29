@@ -38,7 +38,7 @@ export default async function CategoryList() {
                   className="text-c hover:text-c-a"
                   href={`/category/${category._id}`}
                 >
-                  {category.name}
+                  {category.name || ''}
                 </Link>
                 <span className="text-c-s">{`[${category.posts.length}]`}</span>
               </div>
