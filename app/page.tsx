@@ -2,6 +2,7 @@ import ArticleCard from "@/app/ui/articleCard";
 import { initHexo } from "./hexo";
 import { PostSchema } from "hexo/dist/types";
 import { Metadata } from "next";
+import AnimationBox from "@/app/ui/animationBox";
 
 export async function generateMetadata(): Promise<Metadata> {
   const hexo = await initHexo();
@@ -20,7 +21,7 @@ export default async function Home() {
   const posts = hexo.database.model("Post").find({}).sort("-date");
 
   return (
-    <div>
+    <AnimationBox>
       {posts.map((post: PostSchema, index) => {
         const category = hexo.database.model("Category").findOne({
           _id: hexo.database.model("PostCategory").findOne({ post_id: post._id })
@@ -31,6 +32,6 @@ export default async function Home() {
           <ArticleCard key={index} postData={post} category={category} />
         );
       })}
-    </div>
+    </AnimationBox>
   );
 }

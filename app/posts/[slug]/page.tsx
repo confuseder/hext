@@ -6,6 +6,7 @@ import { Archive, CalendarFold } from "lucide-react";
 import { PostSchema } from "hexo/dist/types";
 import { Metadata } from "next";
 import Comments from "@/app/ui/comments";
+import AnimationBox from "@/app/ui/animationBox";
 
 export async function generateStaticParams() {
   const hexo = await initHexo();
@@ -59,7 +60,7 @@ export default async function ArticlePage({
   });
 
   return (
-    <>
+    <AnimationBox>
       <article className="w-full bg-g-m text-c mb-6 rounded overflow-x-hidden">
         <header className="flex flex-col justify-between px-8 my-6">
           <Link
@@ -92,6 +93,6 @@ export default async function ArticlePage({
         </section>
       </article>
       <Comments />
-    </>
+    </AnimationBox>
   );
 }

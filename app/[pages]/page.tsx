@@ -3,6 +3,7 @@ import { initHexo } from "../hexo";
 import CustomMDX from "../mdx/customMDX";
 import { notFound } from "next/navigation";
 import Comments from "../ui/comments";
+import AnimationBox from "@/app/ui/animationBox";
 
 export async function generateStaticParams() {
   const hexo = await initHexo();
@@ -53,7 +54,7 @@ export default async function ArticlePage({
   }
 
   return (
-    <>
+    <AnimationBox>
       <article className="w-full bg-g-m mb-6 text-c rounded overflow-x-hidden">
         <header className="flex flex-col justify-between px-8 my-6">
           <Link className="mb-3 text-c font-bold text-2xl" href={data.url}>
@@ -65,6 +66,6 @@ export default async function ArticlePage({
         </section>
       </article>
       <Comments />
-    </>
+    </AnimationBox>
   );
 }

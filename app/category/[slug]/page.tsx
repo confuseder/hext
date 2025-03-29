@@ -2,6 +2,7 @@ import { initHexo } from "../../hexo";
 import { CategorySchema, PostSchema } from "hexo/dist/types";
 import { Metadata } from "next";
 import ArticleCard from "@/app/ui/articleCard";
+import AnimationBox from "@/app/ui/animationBox";
 
 export async function generateStaticParams() {
   const hexo = await initHexo();
@@ -56,10 +57,11 @@ export default async function ArticlePage({
         </h1>
         <span className="text-c-s">{`共 ${category.posts.length} 篇`}</span>
       </div>
-
-      {category.posts.map((post: PostSchema, index: number) => {
-        return <ArticleCard key={index} postData={post} category={undefined} />;
-      })}
+      <AnimationBox>
+        {category.posts.map((post: PostSchema, index: number) => {
+          return <ArticleCard key={index} postData={post} category={undefined} />;
+        })}
+      </AnimationBox>
     </>
   );
 }

@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@giscus/react": "^3.0.0",
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.12.7",
     "highlight.js": "^11.10.0",
     "katex": "^0.16.11",
     "lucide-react": "^0.460.0",
@@ -27,7 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "eslint": "^8.57.1",
     "eslint-config-next": "15.0.3",
     "hexo": "^7.3.0",
     "postcss": "^8",
