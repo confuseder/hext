@@ -9,6 +9,8 @@ export const initHexo = cache(async (): Promise<Hexo> => {
     return __SECRET_HEXO_INSTANCE__;
   }
 
+  console.log("----Build Hexo----");
+
   const hexo = new Hexo(join(process.cwd(), 'Hexo'), {
     silent: true
   });
