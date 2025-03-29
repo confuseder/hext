@@ -12,6 +12,8 @@ export async function generateStaticParams() {
     .find({})
     .toArray();
 
+  console.log(categoryList);
+
   return categoryList.map((category) => {
     return {
       slug: category._id,
@@ -26,9 +28,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const hexo = await initHexo();
 
+  console.log("Generate Metadata");
+  console.log((await params).slug);
+
   const category: CategorySchema = hexo.database.model("Category").findOne({
     _id: (await params).slug,
   });
+  
+  console.log(hexo.database.model("Category").find({}).toArray());
 
   return {
     title: `${category.name || ''} | ${hexo.config.title}`,
@@ -45,9 +52,14 @@ export default async function ArticlePage({
 }) {
   const hexo = await initHexo();
 
+  console.log("Render");
+  console.log((await params).slug);
+
   const category: CategorySchema = hexo.database.model("Category").findOne({
     _id: (await params).slug
   });
+
+  console.log(category);
 
   return (
     <>
