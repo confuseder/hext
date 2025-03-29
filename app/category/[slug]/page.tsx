@@ -31,7 +31,7 @@ export async function generateMetadata({
   });
 
   return {
-    title: `${category?.name} | ${hexo.config.title}`,
+    title: `${category.name || ''} | ${hexo.config.title}`,
     description: hexo.config.description,
     authors: { name: hexo.config.author },
     icons: "/icon.jpg",
@@ -53,7 +53,7 @@ export default async function ArticlePage({
     <>
       <div className="bg-g-m rounded px-8 py-6 mb-6 flex justify-between items-center">
         <h1 className="text-c font-bold text-2xl">
-          {`分类：${category.name}`}
+          {`分类：${category.name || ''}`}
         </h1>
         <span className="text-c-s">{`共 ${category.posts.length} 篇`}</span>
       </div>
