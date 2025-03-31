@@ -39,7 +39,7 @@ jobs:
         run: |
           pnpm install && cd Hexo && pnpm install && cd ..
       - name: Build with Next.js
-        run: pnpm build
+        run: pnpm build -d
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
