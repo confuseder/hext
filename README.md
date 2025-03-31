@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+盼兮的博客
 
-## Getting Started
+### 关于我
 
-First, run the development server:
+17 岁，高中生，退役 OIer，精神病，很无聊的人。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> 阳光是给沉睡者准备的，彻夜未眠的人只觉得刺眼。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+会什么：
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- React | Next.js | TailwindCSS
+- C++ | Rust | Typescript
+- Linux [Debian | Manjaro]
+- Network | BGP [RouterOS | Bird2]
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+各种账号（欢迎骚扰）：
+- [Github](https://github.com/confuseder)
+- [Telegram](https://t.me/Panxi_39)
 
-## Learn More
+### 关于这个博客：
+很菜，写不出什么技术内容，也没人看，主要是碎碎念。
 
-To learn more about Next.js, take a look at the following resources:
+博客用 Next.js + TailwindCSS 编写，使用 Hexo 作为 CMS，静态渲染并部署在 Github Pages 上，[博客开源](https://github.com/confuseder/hext)。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### 编写时参考了：
+- [Sukka's Blog](https://blog.skk.moe/)
+- [宝硕博客](https://blog.baoshuo.ren/)
