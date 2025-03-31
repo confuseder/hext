@@ -24,8 +24,6 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  // const hexo = await initHexo();
-
   const category: CategorySchema = hexo.database.model("Category").findOne({
     _id: (await params).slug,
   });
@@ -43,8 +41,6 @@ export default async function ArticlePage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // const hexo = await initHexo();
-
   const category: CategorySchema = hexo.database.model("Category").findOne({
     _id: (await params).slug
   });
