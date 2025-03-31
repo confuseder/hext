@@ -37,9 +37,9 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install dependencies
         run: |
-          pnpm install && cd Hexo && pnpm install && cd .. && npx next info
+          pnpm i && cd Hexo && npm i && cd .. && npx next info
       - name: Build with Next.js
-        run: pnpm build -d
+        run: pnpm build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
