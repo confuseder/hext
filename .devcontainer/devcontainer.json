@@ -2,9 +2,9 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "22",
-      "pnpmVersion": "latest"
+      "version": 22
     },
+    "ghcr.io/devcontainers-extra/features/pnpm:2": {},
     "ghcr.io/meaningful-ooo/devcontainer-features/fish:2": {
       "fisher": true
     }
