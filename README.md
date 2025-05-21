@@ -2,7 +2,9 @@
 
 ### 关于我
 
-17 岁，高中生，退役 OIer，精神病，很无聊的人。
+17 岁，高中生（因抑郁症暂时休学），退役 OIer，很无聊的人。
+
+前端开发和网络编程菜鸟。
 
 > 阳光是给沉睡者准备的，彻夜未眠的人只觉得刺眼。
 
@@ -12,6 +14,11 @@
 - C++ | Rust | Typescript
 - Linux [Debian | Manjaro]
 - Network | BGP [RouterOS | Bird2]
+
+玩什么：
+- OSU！
+- War Thunder (U.S. Land 7.3 / Air 4.3)
+- BF5
 
 各种账号（欢迎骚扰）：
 - [Github](https://github.com/confuseder)
